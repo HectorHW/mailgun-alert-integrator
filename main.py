@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Union
 from fastapi import Depends, FastAPI, Response
 from pydantic import BaseModel
 from enum import Enum
@@ -50,7 +50,7 @@ class MailgunApi:
         self.user_email_name = user_email_name or from_user.replace(
             " ", "_").lower()
 
-    def send_email(self, subject: str, text: str, to: List[str] | str) -> requests.Response:
+    def send_email(self, subject: str, text: str, to: Union[List[str], str]) -> requests.Response:
         return requests.post(
             f"https://api.mailgun.net/v3/{self.domain_name}/messages",
             auth=("api", self.api_key),
