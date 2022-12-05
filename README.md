@@ -22,7 +22,7 @@ python main.py
 | ---- | ---- | ---- |
 | MAILGUN_DOMAIN_NAME | `-` | (REQUIRED) domain name registered with mailgun (eg. `sandbox32foo.mailgun.org`) |
 | MAILGUN_API_KEY | `-` | (REQUIRED) api key used for authentication with mailgun |
-| MAILGUN_TARGET_EMAILS | `-` | (REQUIRED) list of emails to send emails separated with commas |
+| MAILGUN_TARGET_EMAILS | `-` | (REQUIRED) list of emails to send notifications to, separated by commas |
 | FROM_USER | `alerts` | name (eg. Alert System) used in email |
 | FROM_USER_EMAIL | `alerts` | actual email address that will take place of username in `username@domain` for sending emails from |
 | BIND_ADDRESS | `0.0.0.0` | interface to bind to |
